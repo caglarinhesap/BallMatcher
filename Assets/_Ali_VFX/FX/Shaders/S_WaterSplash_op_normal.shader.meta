@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 49063372d6669714eb6c79940dcaf66e
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _T_Main: {fileID: 2800000, guid: bd782b467b87ae446951e105642614c2, type: 3}
+  - _FlowmapNoise: {fileID: 2800000, guid: 0e55a84d3700d4e468e0963c55db013d, type: 3}
+  - _Normal: {fileID: 2800000, guid: fdd24a3735002d841ae34e1ec0762551, type: 3}
+  - _DitherNoise: {fileID: 2800000, guid: b64fdb72bd1726044a514f52fac8faa9, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: S_UI_BarFill
+  m_Shader: {fileID: 4800000, guid: 4e9459015c874804084cee719eb24d94, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _USEDETAIL_ON
+  m_InvalidKeywords:
+  - _USEDETAIL1_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Detail1:
+        m_Texture: {fileID: 2800000, guid: 370ba9a0460071147923c3e839c1d448, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowmapTex:
+        m_Texture: {fileID: 2800000, guid: 0e55a84d3700d4e468e0963c55db013d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TexBorder:
+        m_Texture: {fileID: 2800000, guid: 2f1e693ed09d0484e89a7b4b1de32225, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _DetailEdgeSize: 0
+    - _DetailEdgeSize1: 0
+    - _DetailStrength: 1
+    - _FlowmapInfluence: 0.09
+    - _FlowmapInfluence1: 0.09
+    - _FlowmapInfluence2: 0.09
+    - _FlowmapInfluence3: 0.09
+    - _FlowmapStrength: 0.1
+    - _FlowmapStrength1: 0.1
+    - _FlowmapStrength2: 0.1
+    - _FlowmapStrength3: 0.1
+    - _LerpAlpha: 0.5
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseBorder: 0
+    - _UseDetail: 1
+    - _UseDetail1: 1
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _BorderColor: {r: 1, g: 0.9729279, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DetailSize: {r: 0.2, g: 1, b: 0, a: 0}
+    - _DetailSize1: {r: 1, g: 1, b: 0, a: 0}
+    - _DetailSize2: {r: 1, g: 1, b: 0, a: 0}
+    - _DetailSize3: {r: 0.2, g: 1, b: 0, a: 0}
+    - _DetailTexSpeed: {r: 0.3, g: 0, b: 0, a: 0}
+    - _DetailTexSpeed1: {r: 0.3, g: 0, b: 0, a: 0}
+    - _DetailTexSpeed2: {r: 0.3, g: 0, b: 0, a: 0}
+    - _DetailTexSpeed3: {r: 0.3, g: 0, b: 0, a: 0}
+    - _FlowmapSize: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _FlowmapSize1: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _FlowmapSize2: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _FlowmapSpeed: {r: 1, g: 0, b: 0, a: 0}
+    - _FlowmapSpeed1: {r: 1, g: 0, b: 0, a: 0}
+    - _FlowmapSpeed2: {r: 1, g: 0, b: 0, a: 0}
+    - _FlowmapSpeed3: {r: 1, g: 0, b: 0, a: 0}
+    - _LeftColor: {r: 1, g: 0, b: 0, a: 1}
+    - _LeftDetailColor: {r: 2, g: 2, b: 2, a: 0}
+    - _RightColor: {r: 0, g: 0.2601228, b: 1, a: 1}
+    - _RightDetailColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

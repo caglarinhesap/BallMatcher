@@ -9,18 +9,31 @@ public class Ball : MonoBehaviour
     private bool isTouched = false;
     private LevelController levelController;
 
-    [SerializeField]
-    private Vector3 initialSpeed; // Speed on Y-axis must be zero.
+    [SerializeField] private Vector3 initialSpeed; // Speed on Y-axis must be zero.
 
-    [SerializeField]
-    private ParticleSystem hitEffect;
+    [SerializeField] private ParticleSystem hitEffect;
 
     private const float SPEED_MULTIPLIER = 1.0f;
+
+    [SerializeField] private GameObject trailParent;
+    [SerializeField] private ParticleSystem trailPS;
 
     void Start()
     {
         levelController = FindObjectOfType<LevelController>();
-        GetComponent<Rigidbody>().velocity = initialSpeed;
+        GetComponent<Rigidbody>().linearVelocity = initialSpeed;
+
+        if (initialSpeed != Vector3.zero)
+        {
+            if (trailParent != null)//Delete if after test
+            {
+                Vector3 moveDir = initialSpeed;
+                moveDir.Normalize();
+                //Vector3 oppositeDir = -moveDir;
+                trailParent.transform.rotation = Quaternion.LookRotation(moveDir, Vector3.up);
+                trailPS.Play();
+            }
+        }
     }
 
     void Update()
@@ -72,7 +85,16 @@ public class Ball : MonoBehaviour
     private void PullBalls()
     {
         isTouched = true;
-        GetComponent<Rigidbody>().velocity = Vector3.zero; //Stop the ball if the ball has starting speed.
+        GetComponent<Rigidbody>().linearVelocity = Vector3.zero; //Stop the ball if the ball has starting speed.
+
+        if (trailParent != null)//Delete if after test
+        {
+            Vector3 moveDir = initialSpeed;
+            moveDir.Normalize();
+            //Vector3 oppositeDir = -moveDir;
+            trailParent.transform.rotation = Quaternion.LookRotation(moveDir, Vector3.up);
+            trailPS.Stop();
+        }
 
         foreach (GameObject go in levelController.getBallsList())
         {
@@ -91,7 +113,13 @@ public class Ball : MonoBehaviour
     private void MoveBall(GameObject targetBall)
     {
         Vector3 direction = targetBall.transform.position - transform.position;
-        GetComponent<Rigidbody>().velocity = direction.normalized * levelController.GetGameSpeed() * SPEED_MULTIPLIER;
+        GetComponent<Rigidbody>().linearVelocity = direction.normalized * levelController.GetGameSpeed() * SPEED_MULTIPLIER;
+
+        if (trailParent != null)//Delete if after test
+        {
+            trailParent.transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
+            trailPS.Play();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
